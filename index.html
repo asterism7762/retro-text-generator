@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レトロ文字ジェネレーター</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 id="secret-trigger" class="title">レトロ文字ジェネレーター</h1>
+
+        <div id="admin-ui" class="admin-section hidden">
+            <p class="admin-title">【管理モード】画像を選ぶ</p>
+            <div class="admin-controls">
+                <input type="file" id="image-input" accept="image/*">
+                <button id="reset-btn" class="btn-clear">クリア</button>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label for="text-input" class="label-text">文字を入力（改行できます）</label>
+            <textarea id="text-input" rows="3" placeholder="ここに文字を入力">わりと&#13;どうでも&#13;いい</textarea>
+        </div>
+
+        <div class="preview-section">
+            <p class="section-title">プレビュー</p>
+            <canvas id="preview-canvas"></canvas>
+            <button id="download-btn" class="btn-generate">画像をつくる</button>
+        </div>
+
+        <div id="result-wrap" class="result-section" style="display: none;">
+            <p class="section-title">↓ スマホはここを【長押し】で保存！</p>
+            <img id="result-img" alt="生成された画像">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
